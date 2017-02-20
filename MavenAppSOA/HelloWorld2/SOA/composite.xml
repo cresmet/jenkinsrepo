@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated from Oracle SOA Archetype version 12.1.3.0.0  --><composite label="2013-10-14_14-36-17_928" mode="active" name="HelloWorld2" revision="1.0-SNAPSHOT" state="on" xmlns="http://xmlns.oracle.com/sca/1.0" xmlns:orawsp="http://schemas.oracle.com/ws/2006/01/policy" xmlns:sca-ext="http://xmlns.oracle.com/sca/1.0-ext" xmlns:ui="http://xmlns.oracle.com/soa/designer/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <import importType="wsdl" location="WSDLs/BPELProcess1.wsdl" namespace="http://xmlns.oracle.com/MavenAppSOA/HelloWorld2/BPELProcess1"/>
+  <service name="bpelprocess1_client_ep" ui:wsdlLocation="WSDLs/BPELProcess1.wsdl">
+    <interface.wsdl interface="http://xmlns.oracle.com/MavenAppSOA/HelloWorld2/BPELProcess1#wsdl.interface(BPELProcess1)"/>
+    <binding.ws port="http://xmlns.oracle.com/MavenAppSOA/HelloWorld2/BPELProcess1#wsdl.endpoint(bpelprocess1_client_ep/BPELProcess1_pt)"/>
+  </service>
+  <property many="false" name="productVersion" type="xs:string">12.1.3.0.0</property>
+  <component name="BPELProcess1" version="2.0">
+    <implementation.bpel src="BPEL/BPELProcess1.bpel"/>
+    <componentType>
+      <service name="bpelprocess1_client" ui:wsdlLocation="WSDLs/BPELProcess1.wsdl">
+        <interface.wsdl interface="http://xmlns.oracle.com/MavenAppSOA/HelloWorld2/BPELProcess1#wsdl.interface(BPELProcess1)"/>
+      </service>
+    </componentType>
+    <property many="false" name="bpel.config.transaction" type="xs:string">required</property>
+  </component>
+  <wire>
+    <source.uri>bpelprocess1_client_ep</source.uri>
+    <target.uri>BPELProcess1/bpelprocess1_client</target.uri>
+  </wire>
+</composite>
