@@ -42,8 +42,8 @@
         <composite.revision>${project.version}</composite.revision>
         <composite.partition>default</composite.partition>
         <serverUrl>http://t52app10zn4.specialized.com:7004/soa-infra/resources</serverUrl>
-        <user>${oracleUsername}</user>
-        <password>${oraclePassword}</password>
+        <user>weblogic</user>
+        <password>welcome1</password>
         <overwrite>true</overwrite>
         <forceDefault>true</forceDefault>
         <regenerateRulebase>false</regenerateRulebase>
